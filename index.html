@@ -150,7 +150,7 @@
       <p class="text-center pt-2 fs-5 mx-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae?</p>
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-lg-4 text-center">
+          <div class="col-lg-4 text-center pt-3">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.322850372033!2d112.60310701536592!3d-7.965548581597913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7883730366c371%3A0xa49a01c06a89832e!2sDennys%20Coding%20Course!5e0!3m2!1sid!2sid!4v1679132074432!5m2!1sid!2sid" width="300" height="300" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
           <div class="col-lg-6">
@@ -160,19 +160,20 @@
             </div>
             <form name="dcc-contact-form">
               <div class="mb-3">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" name="nama" />
+                <label for="name" class="form-label">Nama</label>
+                <input type="text" class="form-control" id="nama" name="nama" required />
               </div>
               <div class="mb-3">
-                <label for="email" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email" />
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email" placeholder="name@example.com" required />
                 <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
               </div>
               <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password" name="password" />
+                <label for="pesan" class="form-label">Pesan</label>
+                <textarea class="form-control" id="pesan" name="pesan" rows="1" required></textarea>
               </div>
               <button type="submit" class="btn btn-primary btn-kirim">Submit</button>
+              <a type="button" class="btn btn-primary btn-wa" onclick="wa()" target="_blank">Send WA</a>
               <button class="btn btn-primary btn-loading d-none" type="button" disabled>
                 <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                 Loading...
@@ -266,6 +267,15 @@
           })
           .catch((error) => console.error("Error!", error.message));
       });
+
+      function wa() {
+        let nama = document.getElementById("nama").value;
+        let email = document.getElementById("email").value;
+        let pesan = document.getElementById("pesan").value;
+        let waUrl = "https://wa.me/6281336272543/?text=" + "Nama : " + nama + "%0a" + "Email : " + email + "%0a" + "Pesan : " + pesan;
+
+        window.open(waUrl, "_blank").focus();
+      }
     </script>
   </body>
 </html>
