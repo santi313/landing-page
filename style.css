@@ -83,15 +83,15 @@ footer .credit {
 .medsos {
   position: fixed;
   left: 0.5rem;
-  bottom: 1.5rem;
+  bottom: 1rem;
   z-index: 9999;
 }
 
 .medsos a {
   text-decoration: none;
-  width: 3.5rem;
-  height: 3.5rem;
-  margin-top: 0.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-top: 0.2rem;
 }
 
 .medsos a .btn-floating-wa,
