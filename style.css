@@ -91,12 +91,12 @@ footer .credit {
   text-decoration: none;
   width: 2rem;
   height: 2rem;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 .medsos a .btn-floating-wa,
 .medsos a .btn-floating-ig {
-  padding: 0.5rem;
+  padding: 1rem;
   border: 0;
   border-radius: 1.5rem;
   background-color: rgba(255, 255, 255, 0.5);
@@ -110,8 +110,8 @@ footer .credit {
 
 .medsos a:hover span {
   display: inline-block;
-  padding: 0 0.5rem;
-  line-height: 1.4rem;
+  padding: 0 1rem;
+  line-height: 1.5rem;
 }
 
 .medsos a:hover .btn-floating-wa {
