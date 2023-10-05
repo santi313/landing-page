@@ -39,8 +39,8 @@ function wa() {
 
 // untuk testimoni
 let swiper = new Swiper(".mySwiper", {
-  slidesPerView: 2,
-  spaceBetween: 30,
+  // slidesPerView: 1,
+  spaceBetween: 100,
   loop: true,
   grabCursor: true,
   pagination: {
@@ -56,8 +56,14 @@ let swiper = new Swiper(".mySwiper", {
     0: {
       slidesPerView: 1,
     },
-    768: {
+    530: {
       slidesPerView: 2,
+    },
+    992: {
+      slidesPerView: 3,
+    },
+    1200: {
+      slidesPerView: 4,
     },
   },
 });
