@@ -1,4 +1,4 @@
-// untuk form submit
+// FORM SUBMIT
 const scriptURL = "https://script.google.com/macros/s/AKfycbx7R8JYF7gxCGx8J_UbdlGl-EarvIUP_U0HAuPx-I_itZ_UE9JAenqKJ-BLIndse20J/exec";
 
 const form = document.forms["dcc-contact-form"];
@@ -27,43 +27,23 @@ form.addEventListener("submit", (e) => {
     .catch((error) => console.error("Error!", error.message));
 });
 
-// untuk form send wa
-function wa() {
-  let nama = document.getElementById("nama").value;
-  let email = document.getElementById("email").value;
-  let pesan = document.getElementById("pesan").value;
-  let waUrl = "https://wa.me/6281336272543/?text=" + "Nama : " + nama + "%0a" + "Email : " + email + "%0a" + "Pesan : " + pesan;
+// FORM FREE TRIAL HOME
+function waTrialHome() {
+  const namaAnak = document.getElementById("namaAnak").value;
+  const usiaAnak = document.getElementById("usia").value;
+  const namaOrtu = document.getElementById("namaOrtu").value;
+  const noHp = document.getElementById("noHp").value;
+  const email = document.getElementById("email").value;
+  const checkbox = document.getElementById("setuju");
+
+  let setuju = "";
+
+  if (checkbox.checked) {
+    setuju = "*Saya setuju untuk mengikuti kebijakan privasi*";
+  }
+
+  const waUrl = "https://wa.me/6283851744849/?text=" + "Halo DCC, saya ingin reservasi jadwal _Trial Class_ yaaa 😊. %0a Berikut data diri saya," + "%0a Nama Anak : " + namaAnak + "%0a Usia Anak : " + usiaAnak + "%0a Nama Orang Tua : " + namaOrtu + "%0a No. HP Orang Tua : " + noHp + "%0a Email Aktif : " + email + "%0a" + setuju;
 
   window.open(waUrl, "_blank").focus();
+  location.href = "index.html";
 }
-
-// untuk testimoni
-let swiper = new Swiper(".mySwiper", {
-  // slidesPerView: 1,
-  spaceBetween: 100,
-  loop: true,
-  grabCursor: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-    dynamicBullets: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  breakpoints: {
-    0: {
-      slidesPerView: 1,
-    },
-    530: {
-      slidesPerView: 2,
-    },
-    992: {
-      slidesPerView: 3,
-    },
-    1200: {
-      slidesPerView: 4,
-    },
-  },
-});
