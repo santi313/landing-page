@@ -42,7 +42,7 @@ function waTrialHome() {
     setuju = "*Saya setuju untuk mengikuti kebijakan privasi*";
   }
 
-  const waUrl = "https://wa.me/6283851744849/?text=" + "Halo DCC, saya ingin reservasi jadwal _Trial Class_ yaaa 😊. %0a%0aBerikut data diri saya," + "%0aNama Anak : " + namaAnak + "%0aUsia Anak : " + usiaAnak + "%0aNama Orang Tua : " + namaOrtu + "%0aNo. HP Orang Tua : " + noHp + "%0aEmail Aktif : " + email + "%0a%0a" + setuju;
+  const waUrl = "https://wa.me/6283851744849/?text=" + "Halo DCC, saya ingin reservasi jadwal _Trial Class_ yaaa 😊. Berikut data diri saya," + "%0a%0aNama Anak : " + namaAnak + "%0aUsia Anak : " + usiaAnak + "%0aNama Orang Tua : " + namaOrtu + "%0aNo. HP Orang Tua : " + noHp + "%0aEmail Aktif : " + email + "%0a%0a" + setuju;
 
   window.open(waUrl, "_blank").focus();
   location.href = "index.html";
